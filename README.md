@@ -15,3 +15,17 @@ This repository is the starter code for the project: Students will fork and clon
 
 - Express
 - Node 5.10.x or above
+
+## Notes 
+
+### File Tree (Server Code Summary)
+- `server/index.js`
+   - `server/lib/in-memory-db` (in memory object database)
+       - `server/data-files/initial-tweets` (json file of inital tweets)
+   - `server/lib/data-helper` (interface with the database)
+       - Returns `saveTweet` and `getTweet` functions that calls the database
+       - `server/lib/util/simulate-delay` (returns random delay during saveTweet and getTweet)
+   - tweetsRoutes `server/routes/tweets`
+       - Calls the DataHelper function
+           - `saveTweet`, `getTweet`, `db`
+       - requires `userHelper` = `server/lib/util/user-helper`
