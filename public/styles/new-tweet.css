@@ -2,18 +2,18 @@ section.new-tweet {
     background-color: #eee;
     padding: 10px;
     border: solid 1px darkgray;
-    border-radius: 5px;
+    border-radius: 8px;
 }
 
-h2 {
+section.new-tweet h2 {
     margin-top: 0;
     border-bottom: solid 1px black;
 }
-textarea {
+section.new-tweet textarea {
     width: 100%;
     padding: 3px;
 }
-span.counter {
+#counter {
     float: right;
     padding: 8px;
     font-size: 0.75em;

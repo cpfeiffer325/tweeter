@@ -1,0 +1,49 @@
+article.feed {
+    margin-top: 10px;
+    border: solid 1px darkgray;
+    border-radius: 8px;
+}
+
+article.feed header {
+    background-color:#eee;
+    height: 80px;
+    width: 99.99%;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+article.feed .logo {
+    float: left;
+    padding: 5px;
+    width: 80px;
+    height: 80px;
+}
+
+article.feed header h2 {
+    float: left;
+    padding: 10px;
+    margin: 0;
+}
+
+article.feed header p {
+    float: right;
+    padding: 10px;
+}
+
+article.feed div {
+    width: 100%;
+    height: 100px;
+    margin: 15px;
+    padding: auto;
+}
+
+article.feed footer {
+    border-top: solid 0.5px darkgray;
+    padding: 10px;   
+}
+
+article.feed footer p {
+    margin: 0;
+    font-size: 0.6rem; 
+}
+
