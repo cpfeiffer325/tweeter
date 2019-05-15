@@ -1,19 +1,16 @@
-article.feed {
+article {
     margin-top: 10px;
     border: solid 1px darkgray;
     border-radius: 8px;
-}
-
-.feed {
     opacity: 0.6;
 }
 
-.feed:hover {
+article:hover {
     opacity: 1.0;
     border: solid 1px black;
 }
 
-article.feed header {
+article header {
     background-color:#eee;
     height: 50px;
     width: 99.99%;
@@ -21,7 +18,7 @@ article.feed header {
     border-top-right-radius: 8px;
 }
 
-article.feed .logo {
+article .logo {
     float: left;
     padding: 5px;
     width: 50px;
@@ -43,19 +40,19 @@ article.feed .logo {
 
 }
 
-article.feed div {
+article div {
     width: 100%;
     margin-top: 10px;
     margin-bottom: 10px;
     padding: 10px;
 }
 
-article.feed footer {
+article footer {
     border-top: solid 0.5px darkgray;
     padding: 10px;   
 }
 
-article.feed footer p {
+article footer p {
     margin: 0;
     font-size: 0.6rem; 
 }

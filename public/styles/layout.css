@@ -26,9 +26,9 @@ body {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
- main.container {
-  margin: 0 auto;
-  padding-top: 140px;
+ main.tweets-container {
+  margin: 80px auto;
+  padding-top: 60px;
   padding-left: 2em;
   padding-right: 2em;
   padding-bottom: 2em;
