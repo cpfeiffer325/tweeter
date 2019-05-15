@@ -41,7 +41,7 @@
     </nav>
 
     <!-- Page-specific (main) content here -->
-    <main class="tweets-container">
+    <main class="container">
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
         <form  action="/tweets/" method="POST">
@@ -50,19 +50,21 @@
           <span id="counter">140</span>
         </form>
       </section>
-      <article>
-        <header>
-          <img class="logo" src="/images/squirrel-logo.png">
-          <h2 class="name">Dirt Squirrel</h2>
-          <p class="handle">@movember</p>
-        </header>
-        <div>
-          Winter is coming, time to collect nuts for hibernation. Movember is a fun way to raise money and have an excuse to grow a horrible moustache.
-        </div>
-        <footer>
-          <p class="">69 minutes ago</p>
-        </footer>
-      </article>
+      <section id="tweets-container">
+        <article>
+          <header>
+            <img class="logo" src="/images/squirrel-logo.png">
+            <h2 class="name">Dirt Squirrel</h2>
+            <p class="handle">@movember</p>
+          </header>
+          <div>
+            Winter is coming, time to collect nuts for hibernation. Movember is a fun way to raise money and have an excuse to grow a horrible moustache.
+          </div>
+          <footer>
+            <p>69 minutes ago</p>
+          </footer>
+        </article>
+        </section>
     </main>
   </body>
 
