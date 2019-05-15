@@ -2,35 +2,33 @@
 $(document).ready(function() {
 
   function createTweetElement(tweetData) {
+
+// separate variables to store user and avatar object data
     const user = tweetData.user;
     const avatar = user.avatars;
-    
+
+// tweeter element and its main components   
     const $tweet = $("<article>");
-    const $header = $("<header>")
-    const $div = $("<div>")
+    const $header = $("<header>");
     const $footer = $("<footer>");
 
+// elements to be added to tweeter, header, and footer
     const $avatar = $("<img>").attr("src", avatar.small).addClass("logo");
     const $name = $("<h2>").text(user.name).addClass("name");
     const $handle = $("<p>").text(user.handle).addClass("handle");
+    const $content = $("<div>").text(tweetData.content.text);
+    const $time = $("<p>").text(tweetData.created_at);
 
+// append elements to header, footer and then to tweeter
     $header.append($avatar).append($name).append($handle);
-    console.log($header);
-
-    $tweet.append($header).append($div).append($footer);
-    console.log($tweet);
+    $footer.append($time);
+    $tweet.append($header).append($content).append($footer);
     
-    // const tweet = $("<article>");
-    // const header = $("<header>");
-
-    // $("<img>").attr(avatar.small).appendTo(header);
-    // const name = $("<h2>").add class.text(user.name)
-    // $('<h2>').text(user.name).appendTo(header);
-    // $('<p>').text(user.handle).appendTo(header);
-    // console.log(header);
+// return the full tweet to be appended to the tweets-container
     return $tweet;
   }
 
+// tweet database
   const tweetData = {
     "user": {
     "name": "Newton",
