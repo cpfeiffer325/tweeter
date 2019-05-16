@@ -1,5 +1,36 @@
 $(document).ready(function() {
-  
+
+  $("#composeTweet").on("submit", function(event) {
+    event.preventDefault(); 
+
+    let inputLength = $("textarea").val().length;
+    let input = $("textarea").val().trim();
+
+    if (inputLength > 140) {
+      return alert("Ahhhhhh too many characters!");
+    }
+
+    if (!input) {
+      return alert ("Please tweet something :(");
+    }
+
+    $.ajax({
+      url: "/tweets",
+      type: "POST",
+      data: $(this).serialize(),
+      success: console.log("Got response")
+    })  
+    loadTweets();  
+  })
+
+  function loadTweets () {
+    $.ajax({
+      url: "tweets",
+      type: "GET",
+      success: renderTweets
+    })
+  }
+  loadTweets();
   // tweet database
   const data = [
     {
@@ -54,7 +85,7 @@ $(document).ready(function() {
     for (let tweet in tweets) {
       value.push(createTweetElement(tweets[tweet]));
     }
-    return $('#tweets-container').append(value);
+    return $('#tweets-container').prepend(value);
   }
   
 // compiles the elements of the tweet into one article for rendering
