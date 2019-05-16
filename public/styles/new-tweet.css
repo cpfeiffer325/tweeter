@@ -1,4 +1,7 @@
 section.new-tweet {
+    position: fixed;
+    z-index: 3;
+    width: 386px;
     background-color: #eee;
     padding: 10px;
     border: solid 1px darkgray;
