@@ -1,6 +1,7 @@
 section.new-tweet {
     z-index: 3;
     width: 386px;
+    height: 150px;
     background-color: #eee;
     padding: 10px;
     border: solid 1px darkgray;
@@ -11,6 +12,9 @@ section.new-tweet h2 {
     margin-top: 0;
     border-bottom: solid 1px black;
 }
+section.new-tweet input {
+    float: left;
+}
 section.new-tweet textarea {
     width: 100%;
     padding: 3px;
@@ -19,4 +23,20 @@ section.new-tweet textarea {
     float: right;
     padding: 8px;
     font-size: 0.75em;
+}
+.alert {
+    float: left;
+    margin-left: 20px;
+    width: 250px;
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #ffeeba;
+    padding: 5px;
+    border: 1px solid #f5c6cb;
+    border-radius: .2rem;
+    font-size: 0.8em;
+    text-align: center;
+}
+.alert p {
+    margin: 0;
 }

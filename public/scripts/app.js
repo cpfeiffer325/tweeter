@@ -1,4 +1,5 @@
 $(document).ready(function() {
+  $(".alert").slideUp();
 
   $("#composeTweet").on("submit", function(event) {
     event.preventDefault();
@@ -8,10 +9,14 @@ $(document).ready(function() {
     let input = $("textarea").val().trim();
 
     if (inputLength > 140) {
-      return alert("Ahhhhhh too many characters!");
+      $(".alert p").text("Ahhhhhh too many characters!");
+      $(".alert").slideDown();
+      preventDefault();
+      
     }
     if (!input) {
-      return alert ("Please tweet something :(");
+      $(".alert p").text("Please tweet something");
+      $(".alert").slideDown();
     }
 
     // reset function to be called during post that clears entry and resets character counter
@@ -20,6 +25,7 @@ $(document).ready(function() {
       loadTweets();
       this.reset();
       $("#counter").text(140);
+      $(".alert").slideUp();
     })
 
     // post request from new tweet
@@ -82,5 +88,5 @@ $(document).ready(function() {
   $("button").click(function() {
     $(".new-tweet").slideToggle().select();
     $("textarea").focus();
-  }) 
+  })
 });
