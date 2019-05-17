@@ -80,6 +80,7 @@ $(document).ready(function() {
   }
   //
   $("button").click(function() {
-    $(".new-tweet").slideToggle();
+    $(".new-tweet").slideToggle().select();
+    $("textarea").focus();
   }) 
 });
