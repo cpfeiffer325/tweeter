@@ -73,4 +73,8 @@ $(document).ready(function() {
 // return the full tweet to be appended to the tweets-container
     return $tweet;
   }
+
+  $("button").click(function() {
+    $(".new-tweet").slideToggle();
+  }) 
 });
