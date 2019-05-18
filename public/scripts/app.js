@@ -56,6 +56,37 @@ $(document).ready(function() {
       console.log("rendering completed")
     });
   }
+
+  // formating time function
+  function formatTime (time) {
+    var diff = Math.floor((Date.now() - time) / 1000);
+    var interval = Math.floor(diff / 31536000);
+  
+    if (interval >= 1) {
+      return interval + " years" + " ago";
+    }
+    interval = Math.floor(diff / 2592000);
+    if (interval >= 1) {
+      return interval + " months" + " ago";
+    }
+    interval = Math.floor(diff / 604800);
+    if (interval >= 1) {
+      return interval + " weeks" + " ago";
+    }
+    interval = Math.floor(diff / 86400);
+    if (interval >= 1) {
+      return interval + " days" + " ago";
+    }
+    interval = Math.floor(diff / 3600);
+    if (interval >= 1) {
+      return interval + " hours" + " ago";
+    }
+    interval = Math.floor(diff / 60);
+    if (interval >= 1) {
+      return interval + " minutes" + " ago";
+    }
+    return "<1m" + " ago";
+  }
   
   // compiles the elements of the tweet into one article for rendering
   function createTweetElement(tweetData) {
@@ -74,7 +105,7 @@ $(document).ready(function() {
     const $name = $("<h2>").text(user.name).addClass("name");
     const $handle = $("<p>").text(user.handle).addClass("handle");
     const $content = $("<div>").text(tweetData.content.text);
-    const $time = $("<p>").text(tweetData.created_at);
+    const $time = $("<p>").text(formatTime(tweetData.created_at));
 
     // append elements to header, footer and then to tweeter
     $header.append($avatar).append($name).append($handle);
