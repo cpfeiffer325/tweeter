@@ -10,6 +10,10 @@ article:hover {
     border: solid 1px black;
 }
 
+article:hover .icons {
+    display: block;
+}
+
 article header {
     background-color:#eee;
     height: 50px;
@@ -49,11 +53,23 @@ article div {
 
 article footer {
     border-top: solid 0.5px darkgray;
-    padding: 10px;   
+    height: 30px;
+    padding: 3px;
 }
 
 article footer p {
-    margin: 0;
-    font-size: 0.6rem; 
+    float: left;
+    margin: 4px;
+    font-size: 0.8rem; 
+}
+
+.icons {
+    float: right;
+    display: none;
+    padding: 3px 10px;
+}
+
+.icons i {
+    padding-left: 3px;
 }
 

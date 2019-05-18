@@ -109,9 +109,15 @@ $(document).ready(function() {
     const $content = $("<div>").text(tweetData.content.text);
     const $time = $("<p>").text(formatTime(tweetData.created_at));
 
+    const $icons = $("<span>").addClass("icons");
+    const $iconFlag = $("<i>").addClass("fab fa-font-awesome-flag");
+    const $iconRetweet = $("<i>").addClass("fas fa-retweet");
+    const $iconLike = $("<i>").addClass("fas fa-thumbs-up");
+
+
     // append elements to header, footer and then to tweeter
     $header.append($avatar).append($name).append($handle);
-    $footer.append($time);
+    $footer.append($icons.append($iconFlag, $iconRetweet, $iconLike), $time);
     $tweet.append($header).append($content).append($footer);
     
     // return the full tweet to be appended to the tweets-container
