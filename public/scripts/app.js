@@ -17,6 +17,7 @@ $(document).ready(function() {
     if (!input) {
       $(".alert p").text("Please tweet something");
       $(".alert").slideDown();
+      $("textarea").focus();
     }
 
     // reset function to be called during post that clears entry and resets character counter
@@ -26,6 +27,7 @@ $(document).ready(function() {
       this.reset();
       $("#counter").text(140);
       $(".alert").slideUp();
+      $("textarea").focus();
     })
 
     // post request from new tweet
