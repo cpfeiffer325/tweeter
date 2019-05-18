@@ -5,8 +5,10 @@ const chance = new Chance();
 
 const md5 = require('md5');
 
+// generates a random user name along with a random avatar
 module.exports = {
 
+  // function to generate a random user name for each tweet
   generateRandomUser: () => {
     const gender    = chance.gender();
     const firstName = chance.first({gender: gender});
@@ -27,6 +29,7 @@ module.exports = {
       userHandle += suffix;
     }
 
+    // generates a random avatar for the tweet
     const avatarUrlPrefix = `https://vanillicon.com/${md5(userHandle)}`;
     const avatars = {
       small:   `${avatarUrlPrefix}_50.png`,
