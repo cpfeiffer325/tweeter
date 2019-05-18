@@ -5,8 +5,10 @@ const userHelper    = require("../lib/util/user-helper")
 const express       = require('express');
 const tweetsRoutes  = express.Router();
 
+// export function to call new tweet and returns an tweet object that has been added to the database
 module.exports = function(DataHelpers) {
 
+  // retrieves tweets from the database using dataHelpers function
   tweetsRoutes.get("/", function(req, res) {
     DataHelpers.getTweets((err, tweets) => {
       if (err) {
@@ -17,12 +19,14 @@ module.exports = function(DataHelpers) {
     });
   });
 
+  // builds tweet and saves it to the database
   tweetsRoutes.post("/", function(req, res) {
     if (!req.body.text) {
       res.status(400).json({ error: 'invalid request: no data in POST body'});
       return;
     }
 
+    // requests new tweet from app and creates a new tweet object with a randomly generated user
     const user = req.body.user ? req.body.user : userHelper.generateRandomUser();
     const tweet = {
       user: user,
@@ -32,6 +36,7 @@ module.exports = function(DataHelpers) {
       created_at: Date.now()
     };
 
+    // saves the new tweet object to the database
     DataHelpers.saveTweet(tweet, (err) => {
       if (err) {
         res.status(500).json({ error: err.message });
