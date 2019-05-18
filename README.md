@@ -1,31 +1,33 @@
 # Tweeter Project
 
-Tweeter is a simple, single-page Twitter clone.
-
-This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express and MongoDB back-end skills.
+Tweeter is a simple, single-page AJAX-based Twitter clone. It uses jQuery,HTML5 and CSS to help web development student get comfortable with their front end skills along with Node, Express and MongoDB for the back-end.
 
 ## Getting Started
 
 1. Fork this repository, then clone your fork of this repository.
 2. Install dependencies using the `npm install` command.
-3. Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
+3. Start the web server using the `npm run local` command. 
+    - The app will be served at <http://localhost:8080/>
+    - The wapp will connect to the mongo database mongodb://localhost:27017/tweeter
 4. Go to <http://localhost:8080/> in your browser.
 
 ## Dependencies
 
 - Express
 - Node 5.10.x or above
+- Chance
+- MD5
+- MongoDB
+- Body-parser
 
-## Notes 
+## Dev-Dependenies
 
-### File Tree (Server Code Summary)
-- `server/index.js`
-   - `server/lib/in-memory-db` (in memory object database)
-       - `server/data-files/initial-tweets` (json file of inital tweets)
-   - `server/lib/data-helper` (interface with the database)
-       - Returns `saveTweet` and `getTweet` functions that calls the database
-       - `server/lib/util/simulate-delay` (returns random delay during saveTweet and getTweet)
-   - tweetsRoutes `server/routes/tweets`
-       - Calls the DataHelper function
-           - `saveTweet`, `getTweet`, `db`
-       - requires `userHelper` = `server/lib/util/user-helper`
+- Nodemon
+
+## App functionality
+- Compose button collapses and expands new tweet text box and focuses upon opening
+- Tweets limited to 140 characters and produce error on exceedance or blank tweets
+- Tweets highlight on hover
+- Tweets stored in Mongo database
+- Auto refresh posts tweets to feed right after commit
+- Randomly generated avatar and user for every single tweet
