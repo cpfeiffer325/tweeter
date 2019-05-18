@@ -31,3 +31,7 @@ Tweeter is a simple, single-page AJAX-based Twitter clone. It uses jQuery,HTML5 
 - Tweets stored in Mongo database
 - Auto refresh posts tweets to feed right after commit
 - Randomly generated avatar and user for every single tweet
+### Screenshot
+
+### Video of App
+chrome-extension://mmeijimgabbpbgpdklnllpncmdofkcpn/app.html#/files/64dd0293-cec6-4602-y6e0-767a51b40260
