@@ -35,9 +35,3 @@ Tweeter is a simple, single-page AJAX-based Twitter clone. It uses jQuery,HTML5 
 
 ### Screenshot
 !["Screenshot of app"](https://github.com/cpfeiffer325/tweeter/blob/refactor/docs/App-Screenshot.png)
-
-### Video of App
-Paste the following extension into browser to view functionality of app
-[chrome-extension://mmeijimgabbpbgpdklnllpncmdofkcpn/app.html#/files/64dd0293-cec6-4602-y6e0-767a51b40260]
-
-
